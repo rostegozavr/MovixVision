@@ -1,0 +1,22 @@
+[
+{
+"asset_id":"1",
+"asset_name":"Зеленая книга",
+"description":"Описание фильма",
+"image_name":"1.jpg",
+"image_source":"https://movix.ru/1.jpg",
+"subtitle_name":"1.srt",
+"rating":"7.2",
+"asset_link":"movix.ru/movies/1"
+},
+{
+"asset_id":"2",
+"asset_name":"Апгрейд",
+"description":"Описание фильма",
+"image_name":"2.jpg",
+"image_source":"https://movix.ru/2.jpg",
+"subtitle_name":"2.srt",
+"rating":"7.6",
+"asset_link":"movix.ru/movies/2"
+},
+]

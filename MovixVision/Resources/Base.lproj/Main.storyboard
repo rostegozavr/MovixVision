@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Introduction View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="MovixVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="500" verticalHuggingPriority="500" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" image="play" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-3t-v1j">
+                                <rect key="frame" x="177" y="110" width="60" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Fde-lW-Sv1"/>
+                                    <constraint firstAttribute="height" constant="60" id="Utc-vl-ddJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovixVision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHd-aO-Xaq">
+                                <rect key="frame" x="100.00000000000001" y="188" width="214.33333333333337" height="46.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Находи фильмы с помощью камеры" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVP-X9-ACR">
+                                <rect key="frame" x="82" y="250.66666666666663" width="250" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="xnA-YF-bHI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="0.54758105927230039" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pun-Av-3Il">
+                                <rect key="frame" x="82" y="709.66666666666663" width="250" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="IEj-9Q-le5"/>
+                                    <constraint firstAttribute="height" constant="60" id="uhi-W5-qC2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Найти фильмы">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L6u-MW-yFA" kind="show" id="m4O-lB-AAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eqf-3t-v1j" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6fC-Es-oUa"/>
+                            <constraint firstItem="pun-Av-3Il" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9y6-zm-vQf"/>
+                            <constraint firstItem="JVP-X9-ACR" firstAttribute="centerX" secondItem="VHd-aO-Xaq" secondAttribute="centerX" id="H7H-cG-h6w"/>
+                            <constraint firstItem="Eqf-3t-v1j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="I1a-fW-cUw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pun-Av-3Il" secondAttribute="bottom" constant="92.333333333333371" id="Npr-9F-I0I"/>
+                            <constraint firstItem="VHd-aO-Xaq" firstAttribute="centerX" secondItem="Eqf-3t-v1j" secondAttribute="centerX" id="abF-b6-bd3"/>
+                            <constraint firstItem="Eqf-3t-v1j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dYB-NZ-eMX"/>
+                            <constraint firstItem="JVP-X9-ACR" firstAttribute="top" secondItem="VHd-aO-Xaq" secondAttribute="bottom" constant="16" id="xDo-qw-kwX"/>
+                            <constraint firstItem="VHd-aO-Xaq" firstAttribute="top" secondItem="Eqf-3t-v1j" secondAttribute="bottom" constant="20" id="y9l-mg-F5o"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6fC-Es-oUa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="JVP-X9-ACR" id="tDL-V7-fpl"/>
+                        <outlet property="findMoviesButton" destination="pun-Av-3Il" id="Z3y-VE-1cg"/>
+                        <outlet property="icon" destination="Eqf-3t-v1j" id="9Jl-WE-Uwa"/>
+                        <outlet property="iconToTitleConstraint" destination="y9l-mg-F5o" id="u74-Hz-d9k"/>
+                        <outlet property="iconTopConstraint" destination="I1a-fW-cUw" id="CTA-8u-hZW"/>
+                        <outlet property="iconVerticallyCenteredConstraint" destination="6fC-Es-oUa" id="cT5-nu-1E7"/>
+                        <outlet property="titleLabel" destination="VHd-aO-Xaq" id="pYa-lG-92X"/>
+                        <outlet property="titleToDescriptionConstraint" destination="xDo-qw-kwX" id="SSy-oh-KXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Find Movies View Controller-->
+        <scene sceneID="BYR-dc-MiS">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="L6u-MW-yFA" customClass="FindMoviesViewController" customModule="MovixVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qn3-jh-RpY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-T8-c1R">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-nH-VvT" userLabel="Gallery View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="728"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sf-Zc-DAZ" userLabel="Gallery Scroll View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="728"/>
+                                    </scrollView>
+                                    <pageControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="RIi-KN-vmm">
+                                        <rect key="frame" x="20" y="688.66666666666663" width="140.33333333333334" height="27.333333333333371"/>
+                                        <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RIi-KN-vmm" firstAttribute="leading" secondItem="aQT-nH-VvT" secondAttribute="leading" constant="20" id="2mh-ny-9aI"/>
+                                    <constraint firstItem="8sf-Zc-DAZ" firstAttribute="height" secondItem="aQT-nH-VvT" secondAttribute="height" id="9EW-aT-cWx"/>
+                                    <constraint firstItem="8sf-Zc-DAZ" firstAttribute="leading" secondItem="aQT-nH-VvT" secondAttribute="leading" id="G0c-bZ-5pc"/>
+                                    <constraint firstAttribute="bottom" secondItem="RIi-KN-vmm" secondAttribute="bottom" constant="12" id="N6n-eh-vvU"/>
+                                    <constraint firstItem="8sf-Zc-DAZ" firstAttribute="width" secondItem="aQT-nH-VvT" secondAttribute="width" id="pdM-w3-qvV"/>
+                                    <constraint firstItem="8sf-Zc-DAZ" firstAttribute="top" secondItem="aQT-nH-VvT" secondAttribute="top" id="z6f-v7-fw2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GiO-X5-iL8" userLabel="Camera View" customClass="CameraPreviewView" customModule="MovixVision" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="728"/>
+                                <subviews>
+                                    <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-Bj-Msp" userLabel="Shutter View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="728"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-ad-vC9">
+                                        <rect key="frame" x="41.333333333333343" y="324.33333333333331" width="331.33333333333326" height="79.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет доступа к камере. Разрешите его в настройках телефона." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-7W-8a7">
+                                                <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="39.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7o-8o-LaL">
+                                                <rect key="frame" x="0.0" y="47.666666666666686" width="331.33333333333331" height="32"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Попробовать снова"/>
+                                                <connections>
+                                                    <action selector="setupCamera:" destination="L6u-MW-yFA" eventType="touchUpInside" id="WKp-mi-5a2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bOy-7W-8a7" firstAttribute="width" secondItem="nxJ-ad-vC9" secondAttribute="width" id="Na8-1W-BDi"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nxJ-ad-vC9" firstAttribute="centerY" secondItem="GiO-X5-iL8" secondAttribute="centerY" id="BzX-vx-c9C"/>
+                                    <constraint firstItem="xgh-Bj-Msp" firstAttribute="width" secondItem="GiO-X5-iL8" secondAttribute="width" id="SoN-u3-sDe"/>
+                                    <constraint firstItem="nxJ-ad-vC9" firstAttribute="centerX" secondItem="GiO-X5-iL8" secondAttribute="centerX" id="fo3-13-0bV"/>
+                                    <constraint firstItem="xgh-Bj-Msp" firstAttribute="centerY" secondItem="GiO-X5-iL8" secondAttribute="centerY" id="gkP-AQ-deI"/>
+                                    <constraint firstItem="xgh-Bj-Msp" firstAttribute="height" secondItem="GiO-X5-iL8" secondAttribute="height" id="mc7-bB-au3"/>
+                                    <constraint firstItem="nxJ-ad-vC9" firstAttribute="width" secondItem="GiO-X5-iL8" secondAttribute="width" multiplier="0.8" id="w6V-f8-zd5"/>
+                                    <constraint firstItem="xgh-Bj-Msp" firstAttribute="centerX" secondItem="GiO-X5-iL8" secondAttribute="centerX" id="xrn-tR-Icj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCb-CY-NAb" userLabel="Toolbar">
+                                <rect key="frame" x="0.0" y="728" width="414" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KQ-2w-9FN" userLabel="Left Hand Subitems">
+                                        <rect key="frame" x="0.0" y="23" width="177" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-t6-tep" userLabel="Gallery View Button">
+                                                <rect key="frame" x="28.666666666666671" y="0.0" width="120.00000000000001" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="af1-72-azr"/>
+                                                </constraints>
+                                                <state key="normal" title="Примеры"/>
+                                                <connections>
+                                                    <action selector="toggleGalleryView:" destination="L6u-MW-yFA" eventType="touchUpInside" id="sAy-Br-4mK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="eu6-t6-tep" firstAttribute="centerY" secondItem="3KQ-2w-9FN" secondAttribute="centerY" id="2Jp-dP-EDq"/>
+                                            <constraint firstItem="eu6-t6-tep" firstAttribute="height" secondItem="3KQ-2w-9FN" secondAttribute="height" id="78C-bH-UVJ"/>
+                                            <constraint firstItem="eu6-t6-tep" firstAttribute="centerX" secondItem="3KQ-2w-9FN" secondAttribute="centerX" id="moH-8x-tPx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIJ-Tq-hyf" userLabel="Right Hand Subitems">
+                                        <rect key="frame" x="237.66666666666663" y="23" width="176.33333333333337" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGk-Xa-M3E" userLabel="Camera View Button">
+                                                <rect key="frame" x="28.000000000000028" y="0.0" width="120" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="XnJ-EX-epQ"/>
+                                                </constraints>
+                                                <state key="normal" title="Камера"/>
+                                                <connections>
+                                                    <action selector="toggleCameraView:" destination="L6u-MW-yFA" eventType="touchUpInside" id="2Ee-cH-rek"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sGk-Xa-M3E" firstAttribute="centerX" secondItem="iIJ-Tq-hyf" secondAttribute="centerX" id="Q1Q-j9-PfO"/>
+                                            <constraint firstItem="sGk-Xa-M3E" firstAttribute="centerY" secondItem="iIJ-Tq-hyf" secondAttribute="centerY" id="lxG-Bk-7CA"/>
+                                            <constraint firstItem="sGk-Xa-M3E" firstAttribute="height" secondItem="iIJ-Tq-hyf" secondAttribute="height" id="nzD-FJ-FC7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Loj-Hu-gqp"/>
+                                    <constraint firstItem="iIJ-Tq-hyf" firstAttribute="centerY" secondItem="aCb-CY-NAb" secondAttribute="centerY" id="PlN-yO-AkT"/>
+                                    <constraint firstItem="3KQ-2w-9FN" firstAttribute="centerY" secondItem="aCb-CY-NAb" secondAttribute="centerY" id="eWV-wq-AnB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdi-GZ-Zcb" userLabel="Find Movies Button">
+                                <rect key="frame" x="177" y="698" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8bb-g3-Y1c"/>
+                                    <constraint firstAttribute="width" constant="60" id="sFg-eS-57m"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-U9-N1W" userLabel="Tooltip" customClass="TooltipView" customModule="MovixVision" customModuleProvider="target">
+                                <rect key="frame" x="101.33333333333333" y="638" width="211.33333333333337" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Найти похожий фильм?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qN9-NS-FXX">
+                                        <rect key="frame" x="10" y="8" width="191.33333333333334" height="20"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.90230707159624401" alpha="0.70444542253521136" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qN9-NS-FXX" firstAttribute="top" secondItem="dPE-U9-N1W" secondAttribute="top" constant="8" id="J8E-id-nS7"/>
+                                    <constraint firstItem="qN9-NS-FXX" firstAttribute="centerX" secondItem="dPE-U9-N1W" secondAttribute="centerX" id="cvC-bR-ruT"/>
+                                    <constraint firstAttribute="height" secondItem="qN9-NS-FXX" secondAttribute="height" constant="30" id="lCR-hk-5C8"/>
+                                    <constraint firstAttribute="width" secondItem="qN9-NS-FXX" secondAttribute="width" constant="20" id="nN5-3T-rqe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="triangleWidth">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="triangleHeight">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uKX-Uz-DDw"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQT-nH-VvT" firstAttribute="height" secondItem="GiO-X5-iL8" secondAttribute="height" id="8Qa-kq-1W1"/>
+                            <constraint firstItem="kdi-GZ-Zcb" firstAttribute="centerY" secondItem="aCb-CY-NAb" secondAttribute="top" id="8St-FB-mov"/>
+                            <constraint firstItem="kdi-GZ-Zcb" firstAttribute="top" secondItem="dPE-U9-N1W" secondAttribute="bottom" constant="10" id="8cu-SA-iwM"/>
+                            <constraint firstItem="uKX-Uz-DDw" firstAttribute="bottom" secondItem="aCb-CY-NAb" secondAttribute="bottom" id="FrH-nr-KnY"/>
+                            <constraint firstAttribute="trailing" secondItem="EGi-T8-c1R" secondAttribute="trailing" id="Gxg-Ma-gg4"/>
+                            <constraint firstItem="EGi-T8-c1R" firstAttribute="top" secondItem="Qn3-jh-RpY" secondAttribute="top" id="IQ7-kH-1z9"/>
+                            <constraint firstItem="GiO-X5-iL8" firstAttribute="top" secondItem="Qn3-jh-RpY" secondAttribute="top" id="KBK-Gc-1T0"/>
+                            <constraint firstItem="dPE-U9-N1W" firstAttribute="centerX" secondItem="kdi-GZ-Zcb" secondAttribute="centerX" id="NPE-Vo-ha1"/>
+                            <constraint firstItem="3KQ-2w-9FN" firstAttribute="trailing" secondItem="kdi-GZ-Zcb" secondAttribute="leading" id="PrB-Yq-jIH"/>
+                            <constraint firstItem="aQT-nH-VvT" firstAttribute="centerY" secondItem="GiO-X5-iL8" secondAttribute="centerY" id="Siz-2R-Cle"/>
+                            <constraint firstItem="EGi-T8-c1R" firstAttribute="leading" secondItem="Qn3-jh-RpY" secondAttribute="leading" id="UQb-tl-laf"/>
+                            <constraint firstItem="aCb-CY-NAb" firstAttribute="leading" secondItem="uKX-Uz-DDw" secondAttribute="leading" id="XBM-wR-exs"/>
+                            <constraint firstAttribute="bottom" secondItem="EGi-T8-c1R" secondAttribute="bottom" id="ZeT-Lz-yXp"/>
+                            <constraint firstItem="3KQ-2w-9FN" firstAttribute="leading" secondItem="uKX-Uz-DDw" secondAttribute="leading" id="c3K-xf-jn5"/>
+                            <constraint firstAttribute="trailing" secondItem="GiO-X5-iL8" secondAttribute="trailing" id="cWu-yF-cOu"/>
+                            <constraint firstItem="uKX-Uz-DDw" firstAttribute="trailing" secondItem="aCb-CY-NAb" secondAttribute="trailing" id="cb8-1x-fy8"/>
+                            <constraint firstItem="aQT-nH-VvT" firstAttribute="width" secondItem="GiO-X5-iL8" secondAttribute="width" id="cyt-ex-IgK"/>
+                            <constraint firstItem="aCb-CY-NAb" firstAttribute="top" secondItem="GiO-X5-iL8" secondAttribute="bottom" id="feM-Em-oMh"/>
+                            <constraint firstItem="iIJ-Tq-hyf" firstAttribute="trailing" secondItem="aCb-CY-NAb" secondAttribute="trailing" id="jli-Ji-EHQ"/>
+                            <constraint firstItem="aQT-nH-VvT" firstAttribute="centerX" secondItem="GiO-X5-iL8" secondAttribute="centerX" id="lDL-fd-Rmb"/>
+                            <constraint firstItem="iIJ-Tq-hyf" firstAttribute="leading" secondItem="kdi-GZ-Zcb" secondAttribute="trailing" constant="0.5" id="qIT-95-hkm"/>
+                            <constraint firstItem="kdi-GZ-Zcb" firstAttribute="centerX" secondItem="aCb-CY-NAb" secondAttribute="centerX" id="uMw-88-YaP"/>
+                            <constraint firstItem="GiO-X5-iL8" firstAttribute="leading" secondItem="Qn3-jh-RpY" secondAttribute="leading" id="un3-g3-TAr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iiu-sW-Wb0"/>
+                    <connections>
+                        <outlet property="cameraView" destination="GiO-X5-iL8" id="dBt-kb-JjA"/>
+                        <outlet property="cameraViewButton" destination="sGk-Xa-M3E" id="sRP-Vz-AKW"/>
+                        <outlet property="cantAccessCameraView" destination="nxJ-ad-vC9" id="exn-H0-VPQ"/>
+                        <outlet property="dimmingView" destination="EGi-T8-c1R" id="fUE-PQ-VIL"/>
+                        <outlet property="findMoviesButton" destination="kdi-GZ-Zcb" id="QmK-hP-myz"/>
+                        <outlet property="galleryView" destination="aQT-nH-VvT" id="bqD-Nh-QTW"/>
+                        <outlet property="galleryViewButton" destination="eu6-t6-tep" id="uyL-Yv-4Z5"/>
+                        <outlet property="tooltip" destination="dPE-U9-N1W" id="j7s-HS-Ebq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5e-Zb-91r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
