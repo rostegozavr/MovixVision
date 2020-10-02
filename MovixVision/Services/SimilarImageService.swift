@@ -11,7 +11,7 @@ import CoreML
 import Vision
 
 class SimilarImageService {
-    let modelName = "ImageSimilarity"
+    let similarImageService = try! image_encoder.init(configuration: MLModelConfiguration())
     
     typealias Distance = Double
     typealias CompletionHandler = ([Distance]?, Error?) -> ()
@@ -22,7 +22,26 @@ class SimilarImageService {
     }
     
     func calculateSimilarities(image: UIImage, completion: @escaping CompletionHandler) {
-        print("calculateSimilarities")
+        DispatchQueue.global(qos: .userInitiated).async {
+            let orientation   = CGImagePropertyOrientation(rawValue: UInt32(image.imageOrientation.rawValue))!
+            guard let ciImage = CIImage(image: image) else {
+                completion(nil, ServiceError.invalidImage)
+                return
+            }
+            
+            let model = try! VNCoreMLModel(for: self.similarImageService.model)
+            let responseHandler = ResponseHandler(completion)
+            let request = VNCoreMLRequest(model: model, completionHandler: responseHandler.handler)
+            request.imageCropAndScaleOption = .centerCrop
+            
+            do {
+                let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
+                try handler.perform([request])
+            } catch {
+                responseHandler.expire()
+                completion(nil, error)
+            }
+        }
     }
     
     static func similarImageIndices(distances: [Distance]) -> [Int] {
@@ -52,21 +71,23 @@ class SimilarImageService {
             guard
                 let results = request.results,
                 let predictions = results as? [VNCoreMLFeatureValueObservation],
-                let array = predictions.first?.featureValue.multiArrayValue
+                let array1 = predictions[0].featureValue.multiArrayValue,
+                let array2 = predictions[1].featureValue.multiArrayValue
             else {
                 completion?(nil, ServiceError.invalidResults)
                 return
             }
-            completion?(processArray(array), nil)
+            completion?(processArray(array1, array2), nil)
         }
         
-        func processArray(_ array: MLMultiArray) -> [Double] {
-            var distances: [Double] = []
-            let count = array.count
-            for i in 0..<count {
-                distances.append(array[i].doubleValue)
-            }
-            return distances
+        func processArray(_ array1: MLMultiArray, _ array2: MLMultiArray) -> [Double] {
+            //            var distances: [Double] = []
+            //            let count = array.count
+            //            for i in 0..<count {
+            //                distances.append(array[i].doubleValue)
+            //            }
+            //            return distances
+            return [0, 0]
         }
     }
 }

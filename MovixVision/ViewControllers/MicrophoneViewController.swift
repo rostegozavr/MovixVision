@@ -18,6 +18,9 @@ class MicrophoneViewController: UIViewController {
         case findingMovies
     }
     
+    private var isRecording: Bool = false
+    private let offlineSpeechRecognizer = OfflineSpeechRecognizer.shared
+    
     @IBOutlet var microphoneView: UIView!
     //@IBOutlet var cantAccessMicrophoneView: UIStackView!
     @IBOutlet var samplesView: UIView!
@@ -41,11 +44,35 @@ class MicrophoneViewController: UIViewController {
     
     var state = State.ready
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        offlineSpeechRecognizer.prepareListening(forLanguage: "ru", andCountry: "RU", completion: { [weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                switch result {
+                case .success:
+                    print("PrepareListening: Success.")
+                    self.offlineSpeechRecognizer.startListening()
+                case .error(let error):
+                    print("Error: " + String(describing: error))
+                }
+            }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("Will stop listening")
+        self.offlineSpeechRecognizer.stopListening()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSamples()
         setupMicrophone()
         setupDimmingView()
+        offlineSpeechRecognizer.delegate = self
         toggleMicrophoneView(nil)
     }
     
@@ -116,6 +143,12 @@ class MicrophoneViewController: UIViewController {
         samplesViewButton.isSelected = !isMicrophone
         microphoneViewButton.isSelected = isMicrophone
         
+//        if isMicrophone {
+//            offlineSpeechRecognizer.startListening()
+//        } else {
+//            offlineSpeechRecognizer.stopListening()
+//        }
+
         UIView.animate(withDuration: 0.3) {
             self.samplesView.alpha = isMicrophone ? 0 : 1
             self.microphoneView.alpha = isMicrophone ? 1 : 0
@@ -140,8 +173,34 @@ class MicrophoneViewController: UIViewController {
             self.dimmingView.alpha = 0.0
         }
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return mode == .microphone ? .lightContent : .default
+    }
+}
+
+extension MicrophoneViewController: OfflineSpeechRecognizerDelegate {
+
+    public func error(_ offlineSpeechRecognizer: OfflineSpeechRecognizer) {
+        print("Something went wrong! Offline Speech Reconition is not possible.")
+    }
+
+    public func result(_ offlineSpeechRecognizer: OfflineSpeechRecognizer, message: String) {
+        microphone?.label.text = message
+        print(message)
+    }
+
+    public func log(_ offlineSpeechRecognizer: OfflineSpeechRecognizer, message: String) {
+        print(message)
+    }
+
+    public func didStopListening(_ offlineSpeechRecognizer: OfflineSpeechRecognizer) {
+        print("Did Stop Listening")
+        isRecording = false
+    }
+
+    public func didStartListening(_ offlineSpeechRecognizer: OfflineSpeechRecognizer) {
+        print("Did Start Listening")
+        isRecording = true
     }
 }

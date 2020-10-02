@@ -12,10 +12,13 @@ class Samples: NSObject, UIScrollViewDelegate {
     static let PageControlTag = 2
     
     let sampleNames = [
-        "фраза1",
-        "фраза2",
-        "фраза3",
-        "фраза4",
+        "Да пребудет с тобой Сила",
+        "Моя прелесть",
+        "Обожаю запах напалма по утрам",
+        "Элементарно Ватсон",
+        "Ложки нет",
+        "Я требую продолжения банкета",
+        "В чем сила брат",
     ]
 
     let samplesView: UIView

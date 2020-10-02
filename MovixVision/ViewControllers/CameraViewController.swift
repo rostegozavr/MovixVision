@@ -95,9 +95,16 @@ class CameraViewController: UIViewController {
     
     func showMovies(similarTo image: UIImage) {
         movieService.findMovies(similarTo: image) { indices, error in
-            DispatchQueue.main.async {
-                print("show results")
+          DispatchQueue.main.async {
+            self.state = .ready
+            guard error == nil, let indices = indices,
+                  let vc = MoviesListViewController.build(movieService: self.movieService, indices: indices, onDismiss: self.undimOnModalDismissal)
+            else {
+              return self.presentError(error)
             }
+            self.dimForModal()
+            self.present(vc, animated: true, completion: nil)
+          }
         }
     }
     

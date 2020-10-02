@@ -21,7 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Разрешить использовать камеру для поиска фильмов.</string>
+	<string>Разрешите использовать камеру для поиска фильмов.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Разрешите использовать распознавание речи.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Разрешите использовать микрофон.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
