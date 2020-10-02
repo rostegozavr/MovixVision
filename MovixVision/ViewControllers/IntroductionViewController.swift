@@ -13,7 +13,8 @@ class IntroductionViewController: UIViewController {
     @IBOutlet var icon: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var findMoviesButton: UIButton!
+    @IBOutlet var cameraButton: UIButton!
+    @IBOutlet var microphoneButton: UIButton!
     
     @IBOutlet var iconVerticallyCenteredConstraint: NSLayoutConstraint!
     @IBOutlet var iconTopConstraint: NSLayoutConstraint!
@@ -32,8 +33,6 @@ class IntroductionViewController: UIViewController {
     
     // MARK: Setup
     func setupButton() {
-        findMoviesButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
-        findMoviesButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 208, bottom: 0, right: 0)
     }
     
     // MARK: Introduction Animations
@@ -117,5 +116,14 @@ private class IntroductionAnimator {
                 completion: nil
             )
         }
+    }
+}
+
+class DismissingModalViewController: UIViewController {
+    var onDismiss: (() -> ())?
+    
+    @IBAction func dismiss(_ sender: Any) {
+        super.dismiss(animated: true, completion: nil)
+        onDismiss?()
     }
 }

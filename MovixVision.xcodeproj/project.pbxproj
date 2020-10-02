@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D5BD13B25271BC100254EF6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BD13925271BC100254EF6 /* CameraViewController.swift */; };
+		5D5BD13C25271BC100254EF6 /* MicrophoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BD13A25271BC100254EF6 /* MicrophoneViewController.swift */; };
+		5D5BD14425271E2E00254EF6 /* image_encoder.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BD14325271E2E00254EF6 /* image_encoder.mlmodel */; };
+		5D5BD14C252723F800254EF6 /* Microphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BD14B252723F800254EF6 /* Microphone.swift */; };
+		5D5BD151252723FF00254EF6 /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BD150252723FF00254EF6 /* Samples.swift */; };
 		5D612EBD2525DA5E008097A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D612EBC2525DA5E008097A3 /* AppDelegate.swift */; };
 		5D612EBF2525DA5E008097A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D612EBE2525DA5E008097A3 /* SceneDelegate.swift */; };
 		5D612EC42525DA5E008097A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D612EC22525DA5E008097A3 /* Main.storyboard */; };
@@ -18,7 +23,6 @@
 		5DB00F2C2525DC08004DA133 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F282525DC08004DA133 /* Gallery.swift */; };
 		5DB00F2D2525DC08004DA133 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F292525DC08004DA133 /* Camera.swift */; };
 		5DB00F2E2525DC08004DA133 /* TooltipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F2A2525DC08004DA133 /* TooltipView.swift */; };
-		5DB00F372525DC11004DA133 /* FindMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F332525DC11004DA133 /* FindMoviesViewController.swift */; };
 		5DB00F382525DC11004DA133 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F342525DC11004DA133 /* IntroductionViewController.swift */; };
 		5DB00F412525DC1A004DA133 /* SimilarImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F3D2525DC1A004DA133 /* SimilarImageService.swift */; };
 		5DB00F422525DC1A004DA133 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB00F3E2525DC1A004DA133 /* Movies.swift */; };
@@ -43,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D5BD13925271BC100254EF6 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		5D5BD13A25271BC100254EF6 /* MicrophoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneViewController.swift; sourceTree = "<group>"; };
+		5D5BD14325271E2E00254EF6 /* image_encoder.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = image_encoder.mlmodel; sourceTree = "<group>"; };
+		5D5BD14B252723F800254EF6 /* Microphone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Microphone.swift; sourceTree = "<group>"; };
+		5D5BD150252723FF00254EF6 /* Samples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
 		5D612EB92525DA5E008097A3 /* MovixVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovixVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D612EBC2525DA5E008097A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D612EBE2525DA5E008097A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +69,6 @@
 		5DB00F282525DC08004DA133 /* Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		5DB00F292525DC08004DA133 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		5DB00F2A2525DC08004DA133 /* TooltipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipView.swift; sourceTree = "<group>"; };
-		5DB00F332525DC11004DA133 /* FindMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMoviesViewController.swift; sourceTree = "<group>"; };
 		5DB00F342525DC11004DA133 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		5DB00F3D2525DC1A004DA133 /* SimilarImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimilarImageService.swift; sourceTree = "<group>"; };
 		5DB00F3E2525DC1A004DA133 /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
@@ -156,6 +164,8 @@
 		5DB00F242525DB02004DA133 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5D5BD150252723FF00254EF6 /* Samples.swift */,
+				5D5BD14B252723F800254EF6 /* Microphone.swift */,
 				5DB00F292525DC08004DA133 /* Camera.swift */,
 				5DB00F282525DC08004DA133 /* Gallery.swift */,
 				5DB00F2A2525DC08004DA133 /* TooltipView.swift */,
@@ -166,7 +176,8 @@
 		5DB00F252525DB13004DA133 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5DB00F332525DC11004DA133 /* FindMoviesViewController.swift */,
+				5D5BD13925271BC100254EF6 /* CameraViewController.swift */,
+				5D5BD13A25271BC100254EF6 /* MicrophoneViewController.swift */,
 				5DB00F342525DC11004DA133 /* IntroductionViewController.swift */,
 			);
 			path = ViewControllers;
@@ -184,6 +195,7 @@
 		5DB00F482525DC23004DA133 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5D5BD14325271E2E00254EF6 /* image_encoder.mlmodel */,
 				5D7516912526411A00357A88 /* movies.json */,
 				5D612EC22525DA5E008097A3 /* Main.storyboard */,
 				5D612EC52525DA5F008097A3 /* Assets.xcassets */,
@@ -323,9 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5BD14C252723F800254EF6 /* Microphone.swift in Sources */,
+				5D5BD151252723FF00254EF6 /* Samples.swift in Sources */,
+				5D5BD13C25271BC100254EF6 /* MicrophoneViewController.swift in Sources */,
+				5D5BD13B25271BC100254EF6 /* CameraViewController.swift in Sources */,
 				5DB00F2E2525DC08004DA133 /* TooltipView.swift in Sources */,
 				5DB00F422525DC1A004DA133 /* Movies.swift in Sources */,
-				5DB00F372525DC11004DA133 /* FindMoviesViewController.swift in Sources */,
 				5DB00F2C2525DC08004DA133 /* Gallery.swift in Sources */,
 				5DB00F2D2525DC08004DA133 /* Camera.swift in Sources */,
 				5DB00F382525DC11004DA133 /* IntroductionViewController.swift in Sources */,
@@ -333,6 +348,7 @@
 				5D612EBD2525DA5E008097A3 /* AppDelegate.swift in Sources */,
 				5DB00F442525DC1A004DA133 /* MovieService.swift in Sources */,
 				5D612EBF2525DA5E008097A3 /* SceneDelegate.swift in Sources */,
+				5D5BD14425271E2E00254EF6 /* image_encoder.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
